@@ -1,0 +1,35 @@
+{
+    "method": "get",
+    "path": "/users/current",
+    "res": {
+        "requestId": "04124b36-3799-4f85-bb3a-4d63c9485ae7",
+        "responseCode": "00",
+        "responseMessage": "处理成功",
+        "data": {
+            "id": 1,
+            "delFlg": 1,
+            "createBy": 0,
+            "createTime": "2017-06-20 09:18:57",
+            "updateBy": 1,
+            "updateTime": "2017-09-15 19:13:14",
+            "fields": [],
+            "loginId": "admin",
+            "userName": "admin",
+            "sex": 0,
+            "phone": "13585784554",
+            "deptId": 1,
+            "locked": 0,
+            "status": 1,
+            "permissionList": [
+                {
+                    "fields": [],
+                    "menuId": 54,
+                    "permission": "delete",
+                    "menuName": "二级支出类型",
+                    "menuCode": "sys.finance.level.two"
+                }
+            ]
+        },
+        "success": true
+    }
+}

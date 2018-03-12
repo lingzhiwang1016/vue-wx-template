@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        <%=htmlWebpackPlugin.options.title || 'Template'%>
+    </title>
+
+    <!--<meta name="sharecontent" data-msg-img="http://h5-qixing.maysatech.com/share2.png" data-msg-title="美好生活 启航之旅" data-msg-content="1月12日厦万'美好生活启航之旅'体验行攻略" data-msg-callBack="" data-line-img="http://h5-qixing.maysatech.com/share2.png" data-line-title="美好生活 启航之旅" data-line-callBack=""/>-->
+
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- <meta content="telephone=no,email=no" name="format-detection"> -->
+
+    <!--淘宝布局-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="flexible" content="initial-dpr=1"/>
+    <meta content="modeName=750-12" name="grid"/>
+
+    <!--微信sdk和阿里云上传-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <!--<script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>-->
+    <!--<script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.1.2/weui.min.js"></script>-->
+
+    <%if (htmlWebpackPlugin.files.favicon) { %>
+    <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon %>">
+    <% } %>
+    <%for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+    <%} %>
+</head>
+
+<body>
+
+<!--<div style="display: none" src="http://h5-qixing.maysatech.com/share2.png"></div>-->
+
+<div id="app">
+</div>
+
+<%for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script src='<%= htmlWebpackPlugin.files.chunks[chunk].entry %>'></script>
+<%} %>
+
+</body>
+
+</html>
